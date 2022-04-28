@@ -1,0 +1,636 @@
+{
+	"info": {
+		"_postman_id": "02f421f5-02f1-49af-a19f-3eee196c9e9c",
+		"name": "Salesforce API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET ACCESS TOKEN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "orest.vasy11enko@peeklogic.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1q2w3e4r5t6yT1XsrKNw3ryyZG4fToiDoywMe",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "3MVG9cHH2bfKACZbgckKfAHDBHY2VYcZXnu6PeNiGmp_iB1sA_c_gB2EJW4Id7SdJfHAOEzy2.DBmnSeHJVft",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "049022E687E671811AD9A6DF86DA09E3718D49E0266D4DE34DA7E2EFDE739A20\n",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://login.salesforce.com/services/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"login",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GENERAL GET API",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5e000001C3Uw!AQcAQBDUlidyzYyxHTob26ZxZGTmUTcCYD34Mv9051uIo5BNJ0l2NOSiRFX6GZRr_d5f.28ld.6sElQU1UP3YftHn6S7cV5m",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://mytestcompany-4d-dev-ed.my.salesforce.com/services/data/v54.0/",
+					"protocol": "https",
+					"host": [
+						"mytestcompany-4d-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v54.0",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ORG INFO",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5e000001C3Uw!AQcAQBDUlidyzYyxHTob26ZxZGTmUTcCYD34Mv9051uIo5BNJ0l2NOSiRFX6GZRr_d5f.28ld.6sElQU1UP3YftHn6S7cV5m",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://mytestcompany-4d-dev-ed.my.salesforce.com/services/data/v54.0/connect/organization",
+					"protocol": "https",
+					"host": [
+						"mytestcompany-4d-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v54.0",
+						"connect",
+						"organization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE ACCOUNT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5e000001C3Uw!AQcAQBDUlidyzYyxHTob26ZxZGTmUTcCYD34Mv9051uIo5BNJ0l2NOSiRFX6GZRr_d5f.28ld.6sElQU1UP3YftHn6S7cV5m",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\":\"New Account\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mytestcompany-4d-dev-ed.my.salesforce.com/services/data/v54.0/sobjects/Account",
+					"protocol": "https",
+					"host": [
+						"mytestcompany-4d-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v54.0",
+						"sobjects",
+						"Account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE ACCOUNT",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5e000001C3Uw!AQcAQBDUlidyzYyxHTob26ZxZGTmUTcCYD34Mv9051uIo5BNJ0l2NOSiRFX6GZRr_d5f.28ld.6sElQU1UP3YftHn6S7cV5m",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\":\"Changed Name Example\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mytestcompany-4d-dev-ed.my.salesforce.com/services/data/v54.0/sobjects/Account/0015e00000gM8tDAAS",
+					"protocol": "https",
+					"host": [
+						"mytestcompany-4d-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v54.0",
+						"sobjects",
+						"Account",
+						"0015e00000gM8tDAAS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET LIST OF ACCOUNTS / ACCOUNT",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5e000001C3Uw!AQcAQBDUlidyzYyxHTob26ZxZGTmUTcCYD34Mv9051uIo5BNJ0l2NOSiRFX6GZRr_d5f.28ld.6sElQU1UP3YftHn6S7cV5m",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://mytestcompany-4d-dev-ed.my.salesforce.com/services/data/v54.0/sobjects/Account/0015e00000qckapAAA",
+					"protocol": "https",
+					"host": [
+						"mytestcompany-4d-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v54.0",
+						"sobjects",
+						"Account",
+						"0015e00000qckapAAA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ACCOUNT",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5e000001C3Uw!AQcAQBDUlidyzYyxHTob26ZxZGTmUTcCYD34Mv9051uIo5BNJ0l2NOSiRFX6GZRr_d5f.28ld.6sElQU1UP3YftHn6S7cV5m",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://mytestcompany-4d-dev-ed.my.salesforce.com/services/data/v54.0/sobjects/Account/0015e00000qckapAAA",
+					"protocol": "https",
+					"host": [
+						"mytestcompany-4d-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v54.0",
+						"sobjects",
+						"Account",
+						"0015e00000qckapAAA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QUERY",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5e000001C3Uw!AQcAQBDUlidyzYyxHTob26ZxZGTmUTcCYD34Mv9051uIo5BNJ0l2NOSiRFX6GZRr_d5f.28ld.6sElQU1UP3YftHn6S7cV5m",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://mytestcompany-4d-dev-ed.my.salesforce.com/services/data/v54.0/query/?q=SELECT Id, Name FROM Account",
+					"protocol": "https",
+					"host": [
+						"mytestcompany-4d-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v54.0",
+						"query",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "SELECT Id, Name FROM Account"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GLOBAL SEARCH",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5e000001C3Uw!AQcAQBDUlidyzYyxHTob26ZxZGTmUTcCYD34Mv9051uIo5BNJ0l2NOSiRFX6GZRr_d5f.28ld.6sElQU1UP3YftHn6S7cV5m",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://mytestcompany-4d-dev-ed.my.salesforce.com/services/data/v53.0/search/?q=FIND+%7BNew%7D",
+					"protocol": "https",
+					"host": [
+						"mytestcompany-4d-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v53.0",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "FIND+%7BNew%7D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PARAMETERIZED SEARCH",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5e000001C3Uw!AQcAQBDUlidyzYyxHTob26ZxZGTmUTcCYD34Mv9051uIo5BNJ0l2NOSiRFX6GZRr_d5f.28ld.6sElQU1UP3YftHn6S7cV5m",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://mytestcompany-4d-dev-ed.my.salesforce.com/services/data/v53.0/parameterizedSearch/?q=New&sobject=Account",
+					"protocol": "https",
+					"host": [
+						"mytestcompany-4d-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v53.0",
+						"parameterizedSearch",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "New"
+						},
+						{
+							"key": "sobject",
+							"value": "Account"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ANALITICS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5e000001C3Uw!AQcAQBDUlidyzYyxHTob26ZxZGTmUTcCYD34Mv9051uIo5BNJ0l2NOSiRFX6GZRr_d5f.28ld.6sElQU1UP3YftHn6S7cV5m",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://mytestcompany-4d-dev-ed.my.salesforce.com/services/data/v54.0/analytics/",
+					"protocol": "https",
+					"host": [
+						"mytestcompany-4d-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v54.0",
+						"analytics",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TOOLING / CUSTOM FIELD",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5e000001C3Uw!AQcAQBDUlidyzYyxHTob26ZxZGTmUTcCYD34Mv9051uIo5BNJ0l2NOSiRFX6GZRr_d5f.28ld.6sElQU1UP3YftHn6S7cV5m",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"Metadata\":{\r\n      \"type\":\"Text\",\r\n      \"description\":\"\",\r\n      \"inlineHelpText\":\"\",\r\n      \"precision\":null,\r\n      \"label\":\"testField\",\r\n      \"length\":255,\r\n      \"required\":false\r\n   },\r\n   \"FullName\":\"Account.testField__c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mytestcompany-4d-dev-ed.my.salesforce.com/services/data/v41.0/tooling/sobjects/CustomField/",
+					"protocol": "https",
+					"host": [
+						"mytestcompany-4d-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v41.0",
+						"tooling",
+						"sobjects",
+						"CustomField",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GUSTOM ENDPOINT WITH AUTH",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5e000001C3Uw!AQcAQBDUlidyzYyxHTob26ZxZGTmUTcCYD34Mv9051uIo5BNJ0l2NOSiRFX6GZRr_d5f.28ld.6sElQU1UP3YftHn6S7cV5m",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mytestcompany-4d-dev-ed.my.salesforce.com/services/apexrest/accounts?name=test",
+					"protocol": "https",
+					"host": [
+						"mytestcompany-4d-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"apexrest",
+						"accounts"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GUSTOM ENDPOINT WITH AUTH",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5e000001C3Uw!AQcAQBDUlidyzYyxHTob26ZxZGTmUTcCYD34Mv9051uIo5BNJ0l2NOSiRFX6GZRr_d5f.28ld.6sElQU1UP3YftHn6S7cV5m",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\" : {\r\n        \"account\" : {\r\n            \"Name\" : \"Test Account\",\r\n            \"Phone\" : \"+380660313433\",\r\n            \"BillingState\" : \"New York\",\r\n            \"Website\": \"www.peeklogic.com\" \r\n        },\r\n        \"contact\" : {\r\n            \"FirstName\": \"Test\",\r\n            \"LastName\": \"Contact\",\r\n            \"Email\" : \"orest.v@peeklogic.com\",\r\n            \"Phone\" : \"+380660313433\"\r\n        },\r\n        \"coordinates\" : {\r\n            \"lng\" : 38.8951,\r\n            \"lat\" : -77.0364\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mytestcompany-4d-dev-ed.my.salesforce.com/services/apexrest/accounts/",
+					"protocol": "https",
+					"host": [
+						"mytestcompany-4d-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"apexrest",
+						"accounts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GUSTOM ENDPOINT WITH AUTH",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5e000001C3Uw!AQcAQBDUlidyzYyxHTob26ZxZGTmUTcCYD34Mv9051uIo5BNJ0l2NOSiRFX6GZRr_d5f.28ld.6sElQU1UP3YftHn6S7cV5m",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mytestcompany-4d-dev-ed.my.salesforce.com/services/apexrest/accounts/0015e00000qdDfMAAU",
+					"protocol": "https",
+					"host": [
+						"mytestcompany-4d-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"apexrest",
+						"accounts",
+						"0015e00000qdDfMAAU"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GUSTOM ENDPOINT WITHOUT AUTH",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5e000001C3Uw!AQcAQGqzGdvX7aab37ERokXj1qvEXuuN.Onl6MHuNugVLZ94amEx.NdzBcxeocsg0QlDRlF00Ba19fZ.yFTpo3HIF1PGh923",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mytestcompany-4d-dev-ed.my.salesforce.com/services/apexrest/custom/service/webhook/listen/message?from=21474712&to=4612746127&body=text",
+					"protocol": "https",
+					"host": [
+						"mytestcompany-4d-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"apexrest",
+						"custom",
+						"service",
+						"webhook",
+						"listen",
+						"message"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "21474712"
+						},
+						{
+							"key": "to",
+							"value": "4612746127"
+						},
+						{
+							"key": "body",
+							"value": "text"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

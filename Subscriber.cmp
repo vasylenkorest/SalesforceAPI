@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+	<aura:handler name="init" value="{!this}" action="{!c.init}" />
+     
+    <lightning:empApi aura:id="empApi" />
+    <aura:attribute name="channel" type="String" default="/event/Message__e" />
+    
+</aura:component>
